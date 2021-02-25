@@ -19,7 +19,6 @@ sh $HOME/zsh-Ayoub/zsh.sh
 
 
 
-cd $HOME/UBUNTU/
 sudo rm -r $HOME/.zshrc  >/dev/null 2>&1
 sudo rm -r $HOME/.alias  >/dev/null 2>&1
 
