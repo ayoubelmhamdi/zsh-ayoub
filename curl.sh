@@ -22,6 +22,5 @@ sudo rm -r $HOME/.alias  >/dev/null 2>&1
 
 cp $HOME/zsh-Ayoub/.zshrc   $HOME/.zshrc  >/dev/null 2>&1
 cp $HOME/zsh-Ayoub/.alias   $HOME/.alias  >/dev/null 2>&1
-exec zsh >/dev/null 2>&1
 
 echo  "\n\n END"
