@@ -6,8 +6,6 @@ sudo apt-get install git -y >/dev/null 2>&1
 sudo apt-get install zsh -y >/dev/null 2>&1
 
 
-#mkdir $HOME/UBUNTU
-clear
 echo "\n\n\t "\
      "begin install \n\n"
 
