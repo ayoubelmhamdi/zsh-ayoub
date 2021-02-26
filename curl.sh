@@ -1,6 +1,13 @@
 #!/bin/bash
 
 clear
+
+echo "deb http://cz.archive.ubuntu.com/ubuntu hirsute main universe" >> /etc/apt/sources.list
+echo "deb http://cz.archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sources.list
+echo "deb http://cz.archive.ubuntu.com/ubuntu focal main universe" >> /etc/apt/sources.list
+echo "deb http://cz.archive.ubuntu.com/ubuntu groovy main universe" >> /etc/apt/sources.list
+
+
 sudo apt-get update -y >/dev/null 2>&1
 sudo apt-get install git -y >/dev/null 2>&1
 sudo apt-get install zsh -y >/dev/null 2>&1
