@@ -1,18 +1,27 @@
 #!/bin/bash
 
-clear
 
+clear
+var='True'
+while true; do echo "."; sleep 3; done &
 echo "deb http://cz.archive.ubuntu.com/ubuntu hirsute main universe" >> /etc/apt/sources.list
 echo "deb http://cz.archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sources.list
 echo "deb http://cz.archive.ubuntu.com/ubuntu focal main universe" >> /etc/apt/sources.list
 echo "deb http://cz.archive.ubuntu.com/ubuntu groovy main universe" >> /etc/apt/sources.list
 
-
+setup(){
 sudo apt-get update -y >/dev/null 2>&1
 sudo apt-get install git -y >/dev/null 2>&1
 sudo apt-get install zsh -y >/dev/null 2>&1
 sudo apt-get install neofetch -y >/dev/null 2>&1
+}
+setup &
+while kill -0 $!; do
+    printf '.' > /dev/tty
+    sleep 2
+done
 
+printf '\n' > /dev/tty
 
 echo "\n\n\t "\
      "begin install \n\n"
