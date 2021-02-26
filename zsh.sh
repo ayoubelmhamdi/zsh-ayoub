@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo rm -r $HOME/.oh-my-zsh/
-sh  $HOME/zsh-ayoub/zsh-oh.sh
+sudo rm -rf $HOME/.oh-my-zsh/
+sh  $HOME/zsh-Ayoub/zsh-oh.sh
 
 git clone \
     https://github.com/zsh-users/zsh-autosuggestions.git \
