@@ -10,18 +10,13 @@ echo "deb http://cz.archive.ubuntu.com/ubuntu focal main universe" >> /etc/apt/s
 echo "deb http://cz.archive.ubuntu.com/ubuntu groovy main universe" >> /etc/apt/sources.list
 
 setup(){
-sudo apt-get update -y >/dev/null 2>&1
-sudo apt-get install git -y >/dev/null 2>&1
-sudo apt-get install zsh -y >/dev/null 2>&1
-sudo apt-get install neofetch -y >/dev/null 2>&1
+sudo apt-get update -y 
+sudo apt-get install git -y 
+sudo apt-get install zsh -y
+sudo apt-get install neofetch
 }
-setup &
-while kill -0 $!; do
-    printf '.' > /dev/tty
-    sleep 2
-done
+setup >/dev/null 2>&1
 
-printf '\n' > /dev/tty
 
 echo "\n\n\t "\
      "begin install \n\n"

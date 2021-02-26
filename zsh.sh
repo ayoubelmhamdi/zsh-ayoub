@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo rm -rf $HOME/.oh-my-zsh/
+# sudo rm -rf $HOME/.oh-my-zsh/
 sh  $HOME/zsh-Ayoub/zsh-oh.sh
 
 git clone \
