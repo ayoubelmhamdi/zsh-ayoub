@@ -2,8 +2,10 @@
 
 
 clear
-var='True'
-while true; do echo "."; sleep 3; done &
+
+echo "\n\n\t "\
+     "begin install \n\n"
+sudo chown $USER /etc/apt/sources.list
 echo "deb http://cz.archive.ubuntu.com/ubuntu hirsute main universe" >> /etc/apt/sources.list
 echo "deb http://cz.archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sources.list
 echo "deb http://cz.archive.ubuntu.com/ubuntu focal main universe" >> /etc/apt/sources.list
@@ -15,12 +17,17 @@ sudo apt-get install git -y
 sudo apt-get install zsh -y
 sudo apt-get install neofetch
 }
-setup >/dev/null 2>&1
+setup &
+
+while kill -0 $!; do
+    printf '.' > /dev/tty
+    sleep 2
+done
+
+printf '\n' > /dev/tty
 
 
-echo "\n\n\t "\
-     "begin install \n\n"
-
+# setup >/dev/null 2>&1
 git clone \
     https://github.com/ayoubelmhamdi/zsh-ayoub.git  \
     $HOME/zsh-Ayoub >/dev/null 2>&1
