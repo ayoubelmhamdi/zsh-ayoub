@@ -17,17 +17,9 @@ sudo apt-get install git -y
 sudo apt-get install zsh -y
 sudo apt-get install neofetch
 }
-setup &
 
-while kill -0 $!; do
-    printf '.' > /dev/tty
-    sleep 2
-done
+setup >/dev/null 2>&1
 
-printf '\n' > /dev/tty
-
-
-# setup >/dev/null 2>&1
 git clone \
     https://github.com/ayoubelmhamdi/zsh-ayoub.git  \
     $HOME/zsh-Ayoub >/dev/null 2>&1
