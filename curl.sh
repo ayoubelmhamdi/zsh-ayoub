@@ -5,7 +5,7 @@ clear
 
 echo "\n\n\t "\
      "begin install \n\n"
-sudo chown $USER /etc/apt/sources.list
+sudo chown -R $USER /etc/apt/sources.list
 echo "deb http://cz.archive.ubuntu.com/ubuntu hirsute main universe" >> /etc/apt/sources.list
 echo "deb http://cz.archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sources.list
 echo "deb http://cz.archive.ubuntu.com/ubuntu focal main universe" >> /etc/apt/sources.list
